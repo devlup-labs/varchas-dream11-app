@@ -10,7 +10,7 @@ class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
   @override
-  State<MainScreen> createSt9ate() => _MainScreenState();
+  State<MainScreen> createState() => _MainScreenState();
 
   @override
   State<StatefulWidget> createState() {
