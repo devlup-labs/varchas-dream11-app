@@ -24,4 +24,23 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - images/
+    - jsonfile/
 
+  fonts:
+    - family: Pontiac Regular
+      fonts:
+        - asset: fonts/pontiac_regular.otf
+
+    - family: Pontiac Black
+      fonts:
+        - asset: fonts/pontiac_black.otf
+
+    - family: Majorant Regular
+      fonts:
+        - asset: fonts/majorant_regular.ttf
+
+    - family: Majorant Thin
+      fonts:
+        - asset: fonts/majorant_thin.ttf
