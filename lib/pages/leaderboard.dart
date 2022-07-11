@@ -12,6 +12,21 @@ class Leaderboard extends StatefulWidget {
 }
 
 class _LeaderboardState extends State<Leaderboard> {
+  Future<List<Users>> ReadJsonData() async {
+    final jsonData = await rootBundle.rootBundle
+        .loadString("jsonfile/leaderboard_list.json");
+
+    final list = json.decode(jsonData) as List<dynamic>;
+
+    List<Users> userList = list.map((e) => Users.fromJson(e)).toList();
+
+    userList.sort((a, b) {
+      return b.points.compareTo(a.points);
+    });
+
+    return userList;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,8 +64,8 @@ class _LeaderboardState extends State<Leaderboard> {
                 decoration: BoxDecoration(
                   color: secondaryColor,
                   borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(60),
-                    bottomLeft: Radius.circular(60),
+                    bottomRight: Radius.circular(40),
+                    bottomLeft: Radius.circular(40),
                   ),
                 ),
                 child: Row(
@@ -59,6 +74,7 @@ class _LeaderboardState extends State<Leaderboard> {
                   children: [
                     Column(
                       children: [
+                        // Rank Text
                         Text(
                           "2",
                           style: kLabelTextStyleBlack,
@@ -70,12 +86,16 @@ class _LeaderboardState extends State<Leaderboard> {
                         SizedBox(
                           height: 8.0,
                         ),
+                        // Points Text
                         Text(
                           users[1].points.toString(),
+                          overflow: TextOverflow.ellipsis,
                           style: kPointsTextStyleBlack,
                         ),
+                        // Name Text
                         Text(
                           users[1].name,
+                          overflow: TextOverflow.ellipsis,
                           style: kLabelTextStyleBlack,
                         ),
                       ],
@@ -93,18 +113,23 @@ class _LeaderboardState extends State<Leaderboard> {
                         SizedBox(
                           height: 8.0,
                         ),
+                        // Points Text
                         Text(
                           users[0].points.toString(),
+                          overflow: TextOverflow.ellipsis,
                           style: kPointsTextStyleBlack,
                         ),
+                        // Name Text
                         Text(
                           users[0].name,
+                          overflow: TextOverflow.ellipsis,
                           style: kLabelTextStyleBlack,
                         ),
                       ],
                     ),
                     Column(
                       children: [
+                        // Rank Text
                         Text(
                           "3",
                           style: kLabelTextStyleBlack,
@@ -116,12 +141,16 @@ class _LeaderboardState extends State<Leaderboard> {
                         SizedBox(
                           height: 8.0,
                         ),
+                        // Points Text
                         Text(
                           users[2].points.toString(),
+                          overflow: TextOverflow.ellipsis,
                           style: kPointsTextStyleBlack,
                         ),
+                        // Name Text
                         Text(
                           users[2].name,
+                          overflow: TextOverflow.ellipsis,
                           style: kLabelTextStyleBlack,
                         ),
                       ],
@@ -143,14 +172,16 @@ class _LeaderboardState extends State<Leaderboard> {
                     final UserModel = users[index + 3];
                     return ListTile(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(25)),
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       tileColor: primaryColorLight,
                       leading: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          // Rank Text
                           Text(
                             (index + 4).toString(),
+                            overflow: TextOverflow.ellipsis,
                             style: kLabelTextStyleWhite,
                           ),
                           CircleAvatar(
@@ -159,13 +190,17 @@ class _LeaderboardState extends State<Leaderboard> {
                           ),
                         ],
                       ),
+                      // Name Text
                       title: Text(
                         UserModel.name,
+                        overflow: TextOverflow.ellipsis,
                         style: kLabelTextStyleWhite,
                       ),
                       subtitle: Text(""),
+                      // Points Text
                       trailing: Text(
                         UserModel.points.toString(),
+                        overflow: TextOverflow.ellipsis,
                         style: kPointsTextStyleWhite,
                       ),
                     );
@@ -174,19 +209,4 @@ class _LeaderboardState extends State<Leaderboard> {
           ),
         ),
       );
-
-  Future<List<Users>> ReadJsonData() async {
-    final jsonData = await rootBundle.rootBundle
-        .loadString("jsonfile/leaderboard_list.json");
-
-    final list = json.decode(jsonData) as List<dynamic>;
-
-    List<Users> userList = list.map((e) => Users.fromJson(e)).toList();
-
-    userList.sort((a, b) {
-      return b.points.compareTo(a.points);
-    });
-
-    return userList;
-  }
 }

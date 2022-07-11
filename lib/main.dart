@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'main_screen.dart';
-import '../utilities/constants.dart';
 
 void main() {
   runApp(const MyApp());

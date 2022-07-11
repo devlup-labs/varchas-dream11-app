@@ -31,11 +31,16 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         backgroundColor: primaryColor,
         // Profile Icon
-        leading: Icon(FontAwesomeIcons.solidUser),
+        actions: [
+          Icon(FontAwesomeIcons.solidUser),
+          SizedBox(
+            width: 8.0,
+          ),
+        ],
         centerTitle: true,
         title: Text(
           "Varchas",
-          style: TextStyle(fontFamily: "Pontiac Black"),
+          style: TextStyle(fontFamily: "OpenSans Bold"),
         ),
       ),
 
@@ -43,13 +48,13 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: Container(
         color: secondaryColor,
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 15.0),
           child: GNav(
             backgroundColor: secondaryColor,
             color: Colors.black,
             activeColor: Colors.black,
             tabBackgroundColor: secondaryColorLight,
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
             gap: 12.0,
 
             // Functionality when a tab is selected

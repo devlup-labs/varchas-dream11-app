@@ -29,18 +29,18 @@ flutter:
     - jsonfile/
 
   fonts:
-    - family: Pontiac Regular
+    - family: OpenSans Light
       fonts:
-        - asset: fonts/pontiac_regular.otf
+        - asset: fonts/OpenSans-Light.ttf
 
-    - family: Pontiac Black
+    - family: OpenSans Regular
       fonts:
-        - asset: fonts/pontiac_black.otf
+        - asset: fonts/OpenSans-Regular.ttf
 
-    - family: Majorant Regular
+    - family: OpenSans Medium
       fonts:
-        - asset: fonts/majorant_regular.ttf
+        - asset: fonts/OpenSans-Medium.ttf
 
-    - family: Majorant Thin
+    - family: OpenSans Bold
       fonts:
-        - asset: fonts/majorant_thin.ttf
+        - asset: fonts/OpenSans-Bold.ttf
