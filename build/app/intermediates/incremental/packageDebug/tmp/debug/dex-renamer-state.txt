@@ -1,4 +1,0 @@
-#Mon Jul 11 21:33:24 IST 2022
-base.0=/Users/yashmangal/AndroidStudioProjects/varchas-dream11-app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
