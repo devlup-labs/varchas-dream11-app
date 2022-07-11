@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:varchas_dream_11/navbar.dart';
 
+var scaffoldKey = GlobalKey<ScaffoldState>();
 void main() {
   runApp(const MainScreen());
 }
@@ -11,7 +13,6 @@ class MainScreen extends StatefulWidget {
 
   @override
   State<MainScreen> createState() => _MainScreenState();
-  }
 }
 
 /*
@@ -37,13 +38,26 @@ class _MainScreenState extends State<MainScreen> {
       debugShowCheckedModeBanner: false,
 
       home: Scaffold(
-          //Top App Bar
+          key: scaffoldKey,
+          endDrawer: const NavBar(),
           appBar: AppBar(
-            backgroundColor: primaryColor,
-            // Profile Icon
-            leading: Icon(FontAwesomeIcons.solidUser),
+            actions: [
+              Builder(builder: (BuildContext context) {
+                return IconButton(
+                  onPressed: () {
+                    scaffoldKey.currentState?.openEndDrawer();
+                  },
+                  icon: Icon(
+                    Icons.person,
+                  ),
+                );
+              })
+            ],
+            title: Text(
+              'Varchas',
+            ),
             centerTitle: true,
-            title: Text("Varchas"),
+            backgroundColor: Colors.black,
           ),
 
           // Bottom Navigation Bar
