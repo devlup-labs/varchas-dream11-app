@@ -5,6 +5,6 @@ class LiveMatches extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Live Matches"));
+    return const Center(child: Text("Live Matches"));
   }
 }

@@ -16,10 +16,10 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   final pages = [
-    Dashboard(),
-    LiveMatches(),
-    Leaderboard(),
-    Schedule(),
+    const Dashboard(),
+    const LiveMatches(),
+    const Leaderboard(),
+    const Schedule(),
   ];
 
   int currentIndex = 0;
@@ -31,14 +31,14 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         backgroundColor: primaryColor,
         // Profile Icon
-        actions: [
+        actions: const [
           Icon(FontAwesomeIcons.solidUser),
           SizedBox(
             width: 8.0,
           ),
         ],
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Varchas",
           style: TextStyle(fontFamily: "OpenSans Bold"),
         ),
@@ -54,7 +54,8 @@ class _MainScreenState extends State<MainScreen> {
             color: Colors.black,
             activeColor: Colors.black,
             tabBackgroundColor: secondaryColorLight,
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
             gap: 12.0,
 
             // Functionality when a tab is selected
