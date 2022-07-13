@@ -5,6 +5,6 @@ class Schedule extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Schedule"));
+    return const Center(child: Text("Schedule"));
   }
 }
