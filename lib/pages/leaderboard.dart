@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import '../models/Users.dart';
+import '../models/users.dart';
 import '../utilities/constants.dart';
 import 'package:flutter/services.dart' as root_bundle;
 
