@@ -11,7 +11,10 @@ class NavBar extends StatelessWidget {
       child: ListView(
         children: [
           UserAccountsDrawerHeader(
-            decoration: BoxDecoration(color: secondaryColor),
+            decoration: BoxDecoration(
+              color: secondaryColor,
+            ),
+            margin: EdgeInsets.all(0),
             accountName: const Text(
               'UserName',
               style: kLabelTextStyleBlack,
