@@ -18,7 +18,7 @@ jobs:
           channel: "stable"
       - run: flutter pub get
       - run: flutter clean
-      - run: flutter analyse
+      - run: flutter analyze
       - run: flutter test
 
   build_appbundle:
