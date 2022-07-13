@@ -53,23 +53,6 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: Colors.black,
       ),
 
-      //Top App Bar
-      // appBar: AppBar(
-      //   backgroundColor: primaryColor,
-      //   // Profile Icon
-      //   actions: [
-      //     Icon(FontAwesomeIcons.solidUser),
-      //     SizedBox(
-      //       width: 8.0,
-      //     ),
-      //   ],
-      //   centerTitle: true,
-      //   title: Text(
-      //     "Varchas",
-      //     style: TextStyle(fontFamily: "OpenSans Bold"),
-      //   ),
-      // ),
-
       // Bottom Navigation Bar
       bottomNavigationBar: Container(
         color: secondaryColor,
