@@ -1,6 +1,6 @@
 [
-    {"matchteams": "TeamA vs TeamB","matchresults": "Team A won"},
-    {"matchteams": "TeamC vs TeamD","matchresults": "Team D won"},
-    {"matchteams": "TeamE vs TeamF","matchresults": "Team F won"},
-    {"matchteams": "TeamG vs TeamH","matchresults": "Team H won"}
+    {"matchteams": "Team1 vs Team2","matchDate": "18/07/22","matchTime": "7:30"},
+    {"matchteams": "Winner : Team1","matchDate": "16/07/22","matchTime": "Match is finished"},
+    {"matchteams": "Winner : Team2","matchDate": "15/07/22","matchTime": "Match is finished"},
+    {"matchteams": "Team1 vs Team2","matchDate": "18/07/22","matchTime": "2:00"}
 ]

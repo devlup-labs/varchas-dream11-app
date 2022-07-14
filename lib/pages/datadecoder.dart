@@ -1,11 +1,14 @@
 class Matches {
   final String matchteams;
-  final String matchresults;
+  final String matchDate;
+  final String matchTime;
 
-  Matches({required this.matchteams, required this.matchresults});
+  Matches({required this.matchteams, required this.matchDate,required this.matchTime});
 
   factory Matches.fromJson(Map<String, dynamic> json) {
     return Matches(
-        matchteams: json["matchteams"], matchresults: json["matchresults"]);
+        matchteams: json["matchteams"],
+        matchDate: json["matchDate"],
+        matchTime: json["matchTime"]);
   }
 }
