@@ -135,255 +135,9 @@ class _MyAppState extends State<Dashboard> {
                     ),
                   ),
                 ),
-                Container (
-                  margin:const EdgeInsets.fromLTRB(0, 5, 0, 5),
-                  width: 380,
-                  height: 150,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                      color: primaryColorLight,
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                          padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
-                          width: 380,
-                          child:Wrap(
-                            children: [
-                              const Text(
-                                "Venue:  IIT Jodhpur",
-                                style: TextStyle(
-                                    color: Colors.white
-                                ),
-                              ),
-                              Container(
-                                width: 150,
-                              ),
-                              Text(matches[0].matchDate,
-                                style: const TextStyle(
-                                    color: Colors.white
-                                ),)
-                            ],
-                          )
-                      ),
-                      const Divider(
-                        indent: 10,
-                        endIndent: 10,
-                        color: Colors.white,
-                        thickness: 1,
-                      ),
-                      Wrap(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                            child: const CircleAvatar(
-                            radius: 40,
-                            backgroundImage: NetworkImage("https://dshelpingforever.com/wp-content/uploads/2021/04/IIT-Jodhpur-Various-Post-Recruitment-2021-1.jpg"),
-                            ),
-                          ),
-                          Container(
-                            width: 190,
-                            height: 100,
-                            child: Center(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    matches[0].matchteams,
-                                    style: kLabelTextStyleWhite,
-                                  ),
-                                  const Divider(
-                                    height: 10,
-                                    color: primaryColorLight,
-                                  ),
-                                  Text(
-                                    matches[0].matchTime,
-                                    style: const TextStyle(
-                                      color: secondaryColor,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                            child: const CircleAvatar(
-                              radius: 40,
-                              backgroundImage: NetworkImage("https://dshelpingforever.com/wp-content/uploads/2021/04/IIT-Jodhpur-Various-Post-Recruitment-2021-1.jpg"),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Container (
-                  margin:const EdgeInsets.fromLTRB(0, 5, 0, 5),
-                  width: 380,
-                  height: 150,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    color: primaryColorLight,
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
-                        width: 380,
-                        child:Wrap(
-                          children: [
-                          const Text(
-                          "Venue:  IIT Jodhpur",
-                          style: TextStyle(
-                              color: Colors.white
-                          ),
-                        ),
-                          Container(
-                            width: 150,
-                          ),
-                          Text(matches[1].matchDate,
-                            style: const TextStyle(
-                              color: Colors.white
-                          ),)
-                        ],
-                        )
-                      ),
-                      const Divider(
-                        indent: 10,
-                        endIndent: 10,
-                        color: Colors.white,
-                        thickness: 1,
-                      ),
-                      Wrap(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                            child: const CircleAvatar(
-                              radius: 40,
-                              backgroundImage: NetworkImage("https://dshelpingforever.com/wp-content/uploads/2021/04/IIT-Jodhpur-Various-Post-Recruitment-2021-1.jpg"),
-                            ),
-                          ),
-                          Container(
-                            width: 190,
-                            height: 100,
-                            child: Center(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    matches[1].matchteams,
-                                    style: kLabelTextStyleWhite,
-                                  ),
-                                  const Divider(
-                                    height: 10,
-                                    color: primaryColorLight,
-                                  ),
-                                  Text(
-                                    matches[1].matchTime,
-                                    style: const TextStyle(
-                                      color: secondaryColor,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                            child: const CircleAvatar(
-                              radius: 40,
-                              backgroundImage: NetworkImage("https://dshelpingforever.com/wp-content/uploads/2021/04/IIT-Jodhpur-Various-Post-Recruitment-2021-1.jpg"),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Container (
-                  margin:const EdgeInsets.fromLTRB(0, 5, 0, 5),
-                  width: 380,
-                  height: 150,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    color: primaryColorLight,
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                          padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
-                          width: 380,
-                          child:Wrap(
-                            children: [
-                              const Text(
-                                "Venue:  IIT Jodhpur",
-                                style: TextStyle(
-                                    color: Colors.white
-                                ),
-                              ),
-                              Container(
-                                width: 150,
-                              ),
-                              Text(matches[2].matchDate,
-                                style: const TextStyle(
-                                    color: Colors.white
-                                ),)
-                            ],
-                          )
-                      ),
-                      const Divider(
-                        indent: 10,
-                        endIndent: 10,
-                        color: Colors.white,
-                        thickness: 1,
-                      ),
-                      Wrap(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                            child: const CircleAvatar(
-                              radius: 40,
-                              backgroundImage: NetworkImage("https://dshelpingforever.com/wp-content/uploads/2021/04/IIT-Jodhpur-Various-Post-Recruitment-2021-1.jpg"),
-                            ),
-                          ),
-                          Container(
-                            width: 190,
-                            height: 100,
-                            child: Center(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    matches[2].matchteams,
-                                    style: kLabelTextStyleWhite,
-                                  ),
-                                  const Divider(
-                                    height: 10,
-                                    color: primaryColorLight,
-                                  ),
-                                  Text(
-                                    matches[2].matchTime,
-                                    style: const TextStyle(
-                                      color: secondaryColor,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                            child: const CircleAvatar(
-                              radius: 40,
-                              backgroundImage: NetworkImage("https://dshelpingforever.com/wp-content/uploads/2021/04/IIT-Jodhpur-Various-Post-Recruitment-2021-1.jpg"),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
+                matchDisplay(0,matches),
+                matchDisplay(1,matches),
+                matchDisplay(2,matches),
                 Container(
                   margin: const EdgeInsets.all(10),
                   child: ElevatedButton(
@@ -406,9 +160,147 @@ class _MyAppState extends State<Dashboard> {
             )),
       );
 
+  Widget matchDisplay(int a,dynamic matches) => Container (
+    margin:const EdgeInsets.fromLTRB(0, 5, 0, 5),
+    width: 380,
+    height: heightJudge(matches[a].matchResults),
+    decoration: const BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(12)),
+      color: primaryColorLight,
+    ),
+    child: Column(
+      children: [
+        Container(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
+            width: 380,
+            child:Wrap(
+              children: [
+                Text(
+                  matches[a].matchDate,
+                  style: const TextStyle(
+                      color: Colors.white
+                  ),
+                ),
+                Container(
+                  width: 240,
+                ),
+                Text(
+                  matches[a].matchTime,
+                  style: const TextStyle(
+                      color: Colors.white
+                  ),),
+              ],
+            )
+        ),
+        const Divider(
+          indent: 10,
+          endIndent: 10,
+          color: Colors.white,
+          thickness: 1,
+        ),
+        Wrap(
+          children: [
+            Container(
+              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: NetworkImage(matches[a].team1Logo),
+                  ),
+                  Text(
+                    matches[a].team1,
+                    style: kTeamNameTextStyleWhite,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              width: 190,
+              height: 100,
+              child: Center(
+                child: Column(
+                  children: const [
+                    Divider(
+                      height: 10,
+                      color: primaryColorLight,
+                    ),
+                    Text(
+                      "V/S",
+                      style: kTeamNameTextStyleWhite,
+                    )
+                  ],
+                ),
+              ),
+              padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
+            ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: NetworkImage(matches[a].team2Logo),
+                  ),
+                  Text(
+                    matches[a].team2,
+                    style: kTeamNameTextStyleWhite,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        resultDisplay(matches[a].matchResults,matches[a].pointsEarned),
+      ],
+    ),
+  );
+
+  double heightJudge(String result){
+    if (result==""){
+      return 160;
+    }
+    else{
+      return 218;
+    }
+  }
+  Widget resultDisplay(String result,String points) {
+    if (result!=""){
+      return Column(
+        children: [
+          const Divider(
+            indent: 10,
+            endIndent: 10,
+            color: Colors.white,
+            thickness: 1,
+          ),
+          Text(
+                result,
+            style: const TextStyle(
+                color: Colors.white
+            ),
+              ),
+          const Divider(
+            height: 5,
+            color: primaryColorLight,
+          ),
+          Text(
+                "Points Received =   "+points,
+              style: const TextStyle(
+                  color: Colors.white
+              ),
+          )
+        ],
+      );
+    }
+    else {
+      return Container();
+    }
+  }
+
   Future<List<Matches>> readJson() async {
     final jsonData =
-        await rootBundle.rootBundle.loadString("jsonfile/matchdata.json");
+    await rootBundle.rootBundle.loadString("jsonfile/matchdata.json");
     final list = json.decode(jsonData) as List<dynamic>;
     List<Matches> matchList = list.map((e) => Matches.fromJson(e)).toList();
     return matchList;

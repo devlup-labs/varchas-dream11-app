@@ -1,6 +1,42 @@
 [
-    {"matchteams": "Team1 vs Team2","matchDate": "18/07/22","matchTime": "7:30"},
-    {"matchteams": "Winner : Team1","matchDate": "16/07/22","matchTime": "Match is finished"},
-    {"matchteams": "Winner : Team2","matchDate": "15/07/22","matchTime": "Match is finished"},
-    {"matchteams": "Team1 vs Team2","matchDate": "18/07/22","matchTime": "2:00"}
+    {
+        "team1" : "Team 1" ,
+        "team2": "Team 2",
+        "matchDate": "18/07/22",
+        "matchTime": "7:30",
+        "matchResults": "",
+        "team1Logo": "https://images.app.goo.gl/hLrzLorif8gqS5cr5",
+        "team2Logo": "#",
+        "pointsEarned":""
+    },
+    {
+        "team1" : "Team 1" ,
+        "team2": "Team 2",
+        "matchDate": "16/07/22",
+        "matchTime": "12:00",
+        "matchResults": "IIT Jodhpur beats MBM by 15 runs",
+        "team1Logo": "#",
+        "team2Logo": "#",
+        "pointsEarned":"+30"
+    },
+    {
+        "team1" : "Team 1" ,
+        "team2": "Team 2",
+        "matchDate": "15/07/22",
+        "matchTime": "3:00",
+        "matchResults": "IIT Jodhpur defeated NIFT Jodhpur by 5 points",
+        "team1Logo": "#",
+        "team2Logo": "#",
+        "pointsEarned":"-10"
+    },
+    {
+        "team1" : "Team 1" ,
+        "team2": "Team 2",
+        "matchDate": "18/07/22",
+        "matchTime": "2:00",
+        "matchResults": "",
+        "team1Logo": "#",
+        "team2Logo": "#",
+        "pointsEarned":""
+    }
 ]
