@@ -4,6 +4,13 @@ const primaryColor = Color(0xFF212121);
 const primaryColorLight = Color(0xFF484848);
 const secondaryColor = Color(0xFFEF6C00);
 const secondaryColorLight = Color(0xFFFF9D3F);
+const secondaryColorLighter = Color(0x60FF9D3F);
+
+const kTitleTextStyleWhite = TextStyle(
+  fontFamily: 'OpenSans Bold',
+  color: Colors.white,
+  fontSize: 40,
+);
 
 const kLabelTextStyleBlack = TextStyle(
   fontFamily: 'OpenSans Regular',
