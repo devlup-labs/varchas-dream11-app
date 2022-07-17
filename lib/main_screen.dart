@@ -18,7 +18,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final pages = [
+  final pages = const [
     Dashboard(),
     LiveMatches(),
     Leaderboard(),
@@ -39,13 +39,13 @@ class _MainScreenState extends State<MainScreen> {
               onPressed: () {
                 scaffoldKey.currentState?.openEndDrawer();
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.person,
               ),
             );
           })
         ],
-        title: Text(
+        title: const Text(
           'Varchas',
           style: TextStyle(fontFamily: "OpenSans Bold"),
         ),
@@ -63,7 +63,8 @@ class _MainScreenState extends State<MainScreen> {
             color: Colors.black,
             activeColor: Colors.black,
             tabBackgroundColor: secondaryColorLight,
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
             gap: 12.0,
 
             // Functionality when a tab is selected
