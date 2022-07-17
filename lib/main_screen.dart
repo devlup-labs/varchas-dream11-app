@@ -6,6 +6,9 @@ import 'package:varchas_dream_11/pages/live_matches.dart';
 import 'package:varchas_dream_11/pages/schedule.dart';
 import '../utilities/constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'components/navbar.dart';
+
+var scaffoldKey = GlobalKey<ScaffoldState>();
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -15,11 +18,11 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final pages = [
-    const Dashboard(),
-    const LiveMatches(),
-    const Leaderboard(),
-    const Schedule(),
+  final pages = const [
+    Dashboard(),
+    LiveMatches(),
+    Leaderboard(),
+    Schedule(),
   ];
 
   int currentIndex = 0;
@@ -27,21 +30,27 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //Top App Bar
+      key: scaffoldKey,
+      endDrawer: const NavBar(),
       appBar: AppBar(
-        backgroundColor: primaryColor,
-        // Profile Icon
-        actions: const [
-          Icon(FontAwesomeIcons.solidUser),
-          SizedBox(
-            width: 8.0,
-          ),
+        actions: [
+          Builder(builder: (BuildContext context) {
+            return IconButton(
+              onPressed: () {
+                scaffoldKey.currentState?.openEndDrawer();
+              },
+              icon: const Icon(
+                Icons.person,
+              ),
+            );
+          })
         ],
-        centerTitle: true,
         title: const Text(
-          "Varchas",
+          'Varchas',
           style: TextStyle(fontFamily: "OpenSans Bold"),
         ),
+        centerTitle: true,
+        backgroundColor: Colors.black,
       ),
 
       // Bottom Navigation Bar
