@@ -9,17 +9,17 @@ class NavBar extends StatelessWidget {
     return Drawer(
       backgroundColor: primaryColor,
       child: ListView(
-        children: [
+        children: const [
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(
               color: secondaryColor,
             ),
             margin: EdgeInsets.all(0),
-            accountName: const Text(
+            accountName: Text(
               'UserName',
               style: kLabelTextStyleBlack,
             ),
-            accountEmail: const Text(
+            accountEmail: Text(
               'myself@gmail.com',
               style: kLabelTextStyleBlack,
             ),
