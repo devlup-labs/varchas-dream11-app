@@ -22,8 +22,12 @@ class _MyAppState extends State<Dashboard> {
           child: Column(
             children: [
               Container(
-                width: 380,
-                height: 50,
+                constraints: const BoxConstraints(
+                  minHeight: 50,
+                  maxHeight: 60,
+                  minWidth: 380,
+                  maxWidth: 400,
+                ),
                 padding: const EdgeInsets.fromLTRB(5, 15, 5, 15),
                 margin: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                 child: const Text(
@@ -46,7 +50,7 @@ class _MyAppState extends State<Dashboard> {
                     Container(
                       margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                       padding: const EdgeInsets.fromLTRB(10,15,5,15),
-                      width: 175,
+                      width: MediaQuery.of(context).size.width*0.42,
                       decoration: const BoxDecoration(
                           color: primaryColorLight,
                           borderRadius: BorderRadius.all(Radius.circular(10))
@@ -61,12 +65,12 @@ class _MyAppState extends State<Dashboard> {
                               textAlign: TextAlign.left,
                               style: kLabelTextStyleWhite,
                             ),),
-                      ],
+                        ],
                       ),),
                     Container(
                       margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                       padding: const EdgeInsets.fromLTRB(10,15,5,15),
-                      width: 175,
+                      width: MediaQuery.of(context).size.width*0.42,
                       decoration: const BoxDecoration(
                             color: primaryColorLight,
                             borderRadius: BorderRadius.all(Radius.circular(10))
@@ -114,7 +118,7 @@ class _MyAppState extends State<Dashboard> {
       ),);
   }
   Widget buildMatchList(matches) => Container(
-        padding: const EdgeInsets.fromLTRB(0, 20, 5, 0),
+        padding: const EdgeInsets.fromLTRB(5, 20, 5, 0),
         alignment: Alignment.topCenter,
         child: Container(
             width: 380,
@@ -123,7 +127,7 @@ class _MyAppState extends State<Dashboard> {
               children: [
                 Container(
                   width: 380,
-                  height: 60,
+                  // height: 60,
                   padding: const EdgeInsets.fromLTRB(5, 15, 5, 15),
                   margin: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                   child: const Text(
@@ -162,18 +166,18 @@ class _MyAppState extends State<Dashboard> {
 
   Widget matchDisplay(int a,dynamic matches) => Container (
     margin:const EdgeInsets.fromLTRB(0, 5, 0, 5),
+    padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
     width: 380,
-    height: heightJudge(matches[a].matchResults),
     decoration: const BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(12)),
       color: primaryColorLight,
     ),
-    child: Column(
+    child: Wrap(
       children: [
         Container(
-            padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
+            padding: const EdgeInsets.fromLTRB(25, 8, 25, 0),
             width: 380,
-            child:Wrap(
+            child: Center(child: Wrap(
               children: [
                 Text(
                   matches[a].matchDate,
@@ -181,8 +185,11 @@ class _MyAppState extends State<Dashboard> {
                       color: Colors.white
                   ),
                 ),
-                Container(
-                  width: 240,
+                SizedBox(
+                  child: Center(
+                    child: sportsIcon(matches[a].sport),
+                  ),
+                  width: MediaQuery.of(context).size.width*0.55,
                 ),
                 Text(
                   matches[a].matchTime,
@@ -190,7 +197,7 @@ class _MyAppState extends State<Dashboard> {
                       color: Colors.white
                   ),),
               ],
-            )
+            ),),
         ),
         const Divider(
           indent: 10,
@@ -198,10 +205,11 @@ class _MyAppState extends State<Dashboard> {
           color: Colors.white,
           thickness: 1,
         ),
-        Wrap(
+        Center(
+          child: Wrap(
           children: [
             Container(
-              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+              padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
               child: Column(
                 children: [
                   CircleAvatar(
@@ -216,26 +224,22 @@ class _MyAppState extends State<Dashboard> {
               ),
             ),
             Container(
-              width: 190,
+              width: MediaQuery.of(context).size.width*0.38,
               height: 100,
               child: Center(
                 child: Column(
                   children: const [
-                    Divider(
-                      height: 10,
-                      color: primaryColorLight,
-                    ),
                     Text(
-                      "V/S",
+                      "    V/S",
                       style: kTeamNameTextStyleWhite,
                     )
                   ],
                 ),
               ),
-              padding: const EdgeInsets.fromLTRB(0, 25, 0, 25),
+              padding: const EdgeInsets.fromLTRB(0, 40, 0, 25),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
+              padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
               child: Column(
                 children: [
                   CircleAvatar(
@@ -251,21 +255,13 @@ class _MyAppState extends State<Dashboard> {
             ),
           ],
         ),
-        resultDisplay(matches[a].matchResults,matches[a].pointsEarned),
+       ),
+        resultDisplay(matches[a].matchWinner,matches[a].pointsEarned,matches[a].scoreDifference,matches[a].sport,matches[a].team1,matches[a].team2),
       ],
     ),
   );
-
-  double heightJudge(String result){
-    if (result==""){
-      return 160;
-    }
-    else{
-      return 218;
-    }
-  }
-  Widget resultDisplay(String result,String points) {
-    if (result!=""){
+  Widget resultDisplay(String winner,String points,String scoreDifference,String sport,String team1, String team2) {
+    if (winner!=""){
       return Column(
         children: [
           const Divider(
@@ -274,19 +270,15 @@ class _MyAppState extends State<Dashboard> {
             color: Colors.white,
             thickness: 1,
           ),
-          Text(
-                result,
-            style: const TextStyle(
-                color: Colors.white
-            ),
-              ),
+          winningStatement(winner,scoreDifference,sport,team1,team2),
           const Divider(
             height: 5,
             color: primaryColorLight,
           ),
           Text(
-                "Points Received =   "+points,
+              "Points Received = "+points,
               style: const TextStyle(
+                fontSize: 15,
                   color: Colors.white
               ),
           )
@@ -296,6 +288,63 @@ class _MyAppState extends State<Dashboard> {
     else {
       return Container();
     }
+  }
+  Widget winningStatement(String winner,String scoreDifference,String sport,String team1,String team2){
+    if (sport=="cricket" || sport=="basketball"){
+      return Text(
+        winner + " won by " + scoreDifference,
+        style: const TextStyle(
+          fontSize: 16,
+            fontWeight: FontWeight.w400,
+            color: Colors.white
+        ),
+      );
+    }
+    else if (sport=="football"){
+        return Text(
+          team1 + "     " + scoreDifference + "     " + team2,
+          style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+              color: Colors.white
+          ),
+        );
+    }
+    return Container();
+  }
+
+  Widget sportsIcon(String sport) {
+    if (sport == "cricket"){
+      return const Text(
+        "Cricket",
+        style: TextStyle(
+            color: secondaryColorLight,
+            fontSize: 19.0,
+            fontWeight: FontWeight.w800
+        ),
+      );
+    }
+    else if (sport =="football"){
+      return const Text(
+        "Football",
+        style: TextStyle(
+          color: secondaryColorLight,
+          fontSize: 19.0,
+          fontWeight: FontWeight.w800
+        ),
+      );
+    }
+    else if (sport == "basketball"){
+      return const Text(
+        "Basketball",
+        style: TextStyle(
+            color: secondaryColorLight,
+            fontSize: 19.0,
+            fontWeight: FontWeight.w800
+        ),
+      );
+    }
+    return Container();
   }
 
   Future<List<Matches>> readJson() async {
