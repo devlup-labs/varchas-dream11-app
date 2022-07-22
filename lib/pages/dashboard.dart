@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:varchas_dream_11/utilities/constants.dart';
-
+import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'datadecoder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
@@ -212,10 +212,7 @@ class _MyAppState extends State<Dashboard> {
               padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
               child: Column(
                 children: [
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundImage: NetworkImage(matches[a].team1Logo),
-                  ),
+                  teamlogo(matches[a].team1Logo,matches[a].team1),
                   Text(
                     matches[a].team1,
                     style: kTeamNameTextStyleWhite,
@@ -242,10 +239,7 @@ class _MyAppState extends State<Dashboard> {
               padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
               child: Column(
                 children: [
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundImage: NetworkImage(matches[a].team2Logo),
-                  ),
+                  teamlogo(matches[a].team2Logo,matches[a].team2),
                   Text(
                     matches[a].team2,
                     style: kTeamNameTextStyleWhite,
@@ -288,6 +282,17 @@ class _MyAppState extends State<Dashboard> {
     else {
       return Container();
     }
+  }
+  Widget teamlogo(String name,String teamname) {
+    if (name==""){
+      return ProfilePicture(
+        name: teamname, radius: 40, fontsize: 40,
+      );
+    }
+    return CircleAvatar(
+      radius: 40,
+      backgroundImage: NetworkImage(name),
+    );
   }
   Widget winningStatement(String winner,String scoreDifference,String sport,String team1,String team2){
     if (sport=="cricket" || sport=="basketball"){

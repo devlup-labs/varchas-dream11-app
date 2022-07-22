@@ -7,8 +7,8 @@
         "matchTime": "07:30",
         "matchWinner": "",
         "scoreDifference":"",
-        "team1Logo": "https://images.app.goo.gl/hLrzLorif8gqS5cr5",
-        "team2Logo": "#",
+        "team1Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
         "pointsEarned":""
     },
     {
@@ -19,8 +19,8 @@
         "matchTime": "12:00",
         "matchWinner": "Team-1",
         "scoreDifference": "3-2",
-        "team1Logo": "#",
-        "team2Logo": "#",
+        "team1Logo": "",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
         "pointsEarned":"+30"
     },
     {
@@ -31,8 +31,8 @@
         "matchTime": "03:00",
         "matchWinner": "Team-1",
         "scoreDifference": "30 Runs",
-        "team1Logo": "#",
-        "team2Logo": "#",
+        "team1Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
         "pointsEarned":"-10"
     },
     {
@@ -43,8 +43,8 @@
         "matchTime": "2:00",
         "matchWinner": "",
         "scoreDifference": "",
-        "team1Logo": "#",
-        "team2Logo": "#",
+        "team1Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
         "pointsEarned":""
     }
 ]
