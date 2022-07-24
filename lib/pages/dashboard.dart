@@ -3,7 +3,7 @@ import 'package:varchas_dream_11/utilities/constants.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'datadecoder.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' as rootBundle;
+import 'package:flutter/services.dart' as root_bundle;
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -354,7 +354,7 @@ class _MyAppState extends State<Dashboard> {
 
   Future<List<Matches>> readJson() async {
     final jsonData =
-    await rootBundle.rootBundle.loadString("jsonfile/matchdata.json");
+    await root_bundle.rootBundle.loadString("jsonfile/matchdata.json");
     final list = json.decode(jsonData) as List<dynamic>;
     List<Matches> matchList = list.map((e) => Matches.fromJson(e)).toList();
     return matchList;
