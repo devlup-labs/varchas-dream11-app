@@ -1,0 +1,50 @@
+[
+    {
+        "sport": "basketball",
+        "team1" : "Team-1" ,
+        "team2": "Team-2",
+        "matchDate": "18/07/22",
+        "matchTime": "07:30",
+        "matchWinner": "",
+        "scoreDifference":"",
+        "team1Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "pointsEarned":""
+    },
+    {
+        "sport": "football",
+        "team1" : "Team-1" ,
+        "team2": "Team-2",
+        "matchDate": "16/07/22",
+        "matchTime": "12:00",
+        "matchWinner": "Team-1",
+        "scoreDifference": "3-2",
+        "team1Logo": "",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "pointsEarned":"+30"
+    },
+    {
+        "sport": "cricket",
+        "team1" : "Team-1" ,
+        "team2": "Team-2",
+        "matchDate": "15/07/22",
+        "matchTime": "03:00",
+        "matchWinner": "Team-1",
+        "scoreDifference": "30 Runs",
+        "team1Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "pointsEarned":"-10"
+    },
+    {
+        "sport": "football",
+        "team1" : "Team-1" ,
+        "team2": "Team-2",
+        "matchDate": "18/07/22",
+        "matchTime": "2:00",
+        "matchWinner": "",
+        "scoreDifference": "",
+        "team1Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "team2Logo": "https://static.wikia.nocookie.net/idatenjump/images/a/a1/Untitled.png/revision/latest?cb=20110905102255",
+        "pointsEarned":""
+    }
+]
