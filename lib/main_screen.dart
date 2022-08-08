@@ -63,6 +63,8 @@ class _MainScreenState extends State<MainScreen> {
             color: Colors.black,
             activeColor: Colors.black,
             tabBackgroundColor: secondaryColorLight,
+            textStyle: kMediumTextStyleBlack,
+            textSize: 12.0,
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
             gap: 12.0,
