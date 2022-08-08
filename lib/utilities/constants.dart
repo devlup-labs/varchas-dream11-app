@@ -63,3 +63,10 @@ const kPointsTextStyleWhite = TextStyle(
   color: Colors.white,
   fontSize: 22.0,
 );
+
+const kTeamNameTextStyleWhite = TextStyle(
+  fontFamily: 'OpenSans Light',
+  color: Colors.white,
+  fontSize: 15.0,
+  fontWeight: FontWeight.w800,
+);
