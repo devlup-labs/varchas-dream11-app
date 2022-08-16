@@ -18,19 +18,19 @@ Widget matchDisplay(int a,dynamic matches,BuildContext context) => Container (
         child: Center(child: Wrap(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
               child:Text(
-                matches[a].matchDate,
+                matches[a].date,
                 style: const TextStyle(
                     color: Colors.white
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(0, 3, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 3, 0, 0),
               child:SizedBox(
                 child: Center(
-                  child: sportsname(matches[a].sport),
+                  child: sportsname(matches[a].event),
                 ),
                 width: MediaQuery.of(context).size.width*0.55,
               ),
@@ -38,7 +38,7 @@ Widget matchDisplay(int a,dynamic matches,BuildContext context) => Container (
             Padding(
               padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
               child:Text(
-                matches[a].matchTime,
+                matches[a].time,
                 style: const TextStyle(
                     color: Colors.white
                 ),
@@ -98,7 +98,7 @@ Widget matchDisplay(int a,dynamic matches,BuildContext context) => Container (
           ],
         ),
       ),
-      resultDisplay(matches[a].matchWinner,matches[a].pointsEarned,matches[a].scoreDifference,matches[a].sport,matches[a].team1,matches[a].team2),
+      resultDisplay(matches[a].matchWinner,matches[a].pointsEarned,matches[a].scoreDifference,matches[a].event,matches[a].team1,matches[a].team2),
     ],
   ),
 );
@@ -131,10 +131,10 @@ Widget resultDisplay(String winner,String points,String scoreDifference,String s
     return Container();
   }
 }
-Widget teamlogo(String name,String teamname) {
+Widget teamlogo(String name,String teamName) {
   if (name==""){
     return ProfilePicture(
-      name: teamname, radius: 40, fontsize: 40,
+      name: teamName, radius: 40, fontsize: 40,
     );
   }
   return CircleAvatar(
@@ -143,7 +143,7 @@ Widget teamlogo(String name,String teamname) {
   );
 }
 Widget winningStatement(String winner,String scoreDifference,String sport,String team1,String team2){
-  if (sport=="cricket" || sport=="basketball"){
+  if (sport=="Cricket" || sport=="Basketball"){
     return Text(
       winner + " won by " + scoreDifference,
       style: const TextStyle(
@@ -153,7 +153,7 @@ Widget winningStatement(String winner,String scoreDifference,String sport,String
       ),
     );
   }
-  else if (sport=="football"){
+  else if (sport=="Football"){
     return Text(
       team1 + "     " + scoreDifference + "     " + team2,
       style: const TextStyle(
@@ -167,35 +167,12 @@ Widget winningStatement(String winner,String scoreDifference,String sport,String
 }
 
 Widget sportsname(String sport) {
-  if (sport == "cricket"){
-    return const Text(
-      "Cricket",
-      style: TextStyle(
-          color: secondaryColorLight,
-          fontSize: 19.0,
-          fontWeight: FontWeight.w800
-      ),
-    );
-  }
-  else if (sport =="football"){
-    return const Text(
-      "Football",
-      style: TextStyle(
-          color: secondaryColorLight,
-          fontSize: 19.0,
-          fontWeight: FontWeight.w800
-      ),
-    );
-  }
-  else if (sport == "basketball"){
-    return const Text(
-      "Basketball",
-      style: TextStyle(
-          color: secondaryColorLight,
-          fontSize: 19.0,
-          fontWeight: FontWeight.w800
-      ),
-    );
-  }
-  return Container();
+  return Text(
+    sport,
+    style: const TextStyle(
+        color: secondaryColorLight,
+        fontSize: 19.0,
+        fontWeight: FontWeight.w800
+    ),
+  );
 }
