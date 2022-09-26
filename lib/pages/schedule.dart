@@ -41,6 +41,7 @@ class _MyAppState extends State<Schedule> {
     List<SchMatches> schMatchList3 = [];
     for (var v in jsonData2["results"]){
       Teams teamDetails = Teams(
+          // v is taking individual team details
           v["url"],v["teamId"],v["college"],v["sport"],v["score"]
       );
       teamNames.add(teamDetails);
@@ -51,6 +52,7 @@ class _MyAppState extends State<Schedule> {
         var response = await http.get(url);
         jsonData2 = jsonDecode(response.body);
         for (var v in jsonData2["results"]){
+          // v is taking individual team details
           Teams teamDetails = Teams(
               v["url"],v["teamId"],v["college"],v["sport"],v["score"]
           );
@@ -58,14 +60,17 @@ class _MyAppState extends State<Schedule> {
         }
       }
     }
+    // dictionary object to keep the name and College Id
     var teamDict = {};
     for (var v in teamNames){
       teamDict[v.teamId]=v.college;
     }
     for (var u in jsonData1["results"]) {
       SchMatches schMatch = SchMatches(
+          // u contains the details of a particular match
           sportsChoices[u["event"]], teamDict[u["team1"]],teamDict[u["team2"]], u["date"], u["time"],u["team1Logo"]="",u["team2Logo"]="",u["matchWinner"]="",u["pointsEarned"]="",u["scoreDifference"]=""
       );
+      // sorting of matches in accordance with dates
       if (schMatch.date==dates[0]){
         schMatchList1.add(schMatch);
       }
@@ -102,7 +107,7 @@ class _MyAppState extends State<Schedule> {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
-          body: Column(
+          body: Wrap(
             children: [
               Container(
                 padding: const EdgeInsets.fromLTRB(28, 0, 28, 0),
@@ -124,7 +129,7 @@ class _MyAppState extends State<Schedule> {
               Container(
                 margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 width: double.maxFinite,
-                height: MediaQuery.of(context).size.height - 193,
+                height: MediaQuery.of(context).size.height,
                 child: TabBarView(
                     children: [
                       FutureBuilder<dynamic>(
@@ -165,6 +170,7 @@ class _MyAppState extends State<Schedule> {
               )
             ],
           ),
+
           backgroundColor: primaryColor,
         ),
       ),
@@ -182,7 +188,7 @@ Widget matchesOfDay(List matchList,BuildContext context){
       for (var i=0; i<matchList.length;i++)
         matchDisplay(i, matchList, context),
       Container(
-        height: 10,
+        height: 205,
       )
     ],
   ),
@@ -193,6 +199,7 @@ class SchMatches {
   String? event,team1,team2,date,time,team1Logo,team2Logo,matchWinner,pointsEarned,scoreDifference;
   SchMatches(this.event, this.team1, this.team2, this.date, this.time,this.team1Logo,this.team2Logo,this.matchWinner,this.pointsEarned,this.scoreDifference);
 }
+
 class Teams{
   String? teamId,college,url,sport;
   int score;
