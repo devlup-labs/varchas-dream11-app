@@ -1,6 +1,6 @@
 [
     {
-        "sport": "basketball",
+        "sport": "Basketball",
         "team1" : "Team-1" ,
         "team2": "Team-2",
         "matchDate": "18/07/22",
@@ -12,7 +12,7 @@
         "pointsEarned":""
     },
     {
-        "sport": "football",
+        "sport": "Football",
         "team1" : "Team-1" ,
         "team2": "Team-2",
         "matchDate": "16/07/22",
@@ -24,7 +24,7 @@
         "pointsEarned":"+30"
     },
     {
-        "sport": "cricket",
+        "sport": "Cricket",
         "team1" : "Team-1" ,
         "team2": "Team-2",
         "matchDate": "15/07/22",
@@ -36,7 +36,7 @@
         "pointsEarned":"-10"
     },
     {
-        "sport": "football",
+        "sport": "Football",
         "team1" : "Team-1" ,
         "team2": "Team-2",
         "matchDate": "18/07/22",
